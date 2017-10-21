@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calendar</title>
+    <style>
+        html,body,div,table,tr,td{
+            margin: 0;
+            padding: 0;
+        }
+
+        .calendar {
+            position: relative;
+            padding-top: 30px;
+            border: 2px solid #57abff;
+            width: 350px;
+        }
+
+        .canlendarHeader {
+            border-bottom: 1px #57abff solid;
+        }
+
+        .canlendarHeaderBox{
+            display: inline-block;
+            width: 25%;
+            height: 28px;
+            line-height: 26px;
+            box-sizing: border-box;
+            border: 1px #b3b1b1 solid;
+            border-right: 0;
+            margin: 20px 0;
+        }
+
+        .canlendarHeaderBox:last-child{
+            border-right: 1px #b3b1b1 solid;
+        }
+
+        .canlendarHeader select, .canlendarHeader button {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background: transparent;
+        }
+
+        .close{
+            position: absolute;
+            right: 10px;
+            top: 0;
+            color: red;
+        }
+
+        .gray{
+            color: #d6d3d3;
+        }
+
+        .initDay{
+            color: #0d71f9
+        }
+
+        .calendarTable {
+            border-collapse: collapse;
+        }
+
+        .calendarTable td {
+            border-bottom: 1px #57abff solid;
+            border-collapse: collapse;
+            text-align: center;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .calendarTable tr:last-child td{
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="mydate"></label>
+        <input id="mydate">
+    </div>
+    <script>
+        /*
+        模拟用户调用
+        */
+
+        /*
+        暴露给用户的参数配置：
+        className: 日历外层class，默认为calendar
+        initDate: 初始化日期，默认为系统当前日期
+        inputId: input的id，默认为mydate
+        beginYear: 开始年份
+        endYear: 结束年份
+        */
+
+        new Calendar({
+            initDate: new Date('2017/8/1'),
+            className: 'calendar',
+            inputId: 'mydate',
+            beginYear: 1900,
+            endYear: 2050
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calendar</title>
+    <style>
+        .calendar {
+            position: relative;
+            padding-top: 30px;
+            width: 170px;
+        }
+
+        .close{
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: red;
+        }
+
+        .gray{
+            color: #d6d3d3;
+        }
+
+        .initDay{
+            color: #0d71f9
+        }
+    </style>
+<script type="text/javascript" src="calendar.js"></script></head>
+<body>
+    <div>
+        <label for="mydate"></label>
+        <input id="mydate">
+    </div>
+    <script>
+        new Calendar()
+    </script>
+</body>
+</html>
